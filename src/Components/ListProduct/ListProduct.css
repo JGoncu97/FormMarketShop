@@ -1,0 +1,32 @@
+.ListProduct {
+    background-color: rgb(189, 99, 99);
+    width: 20rem;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    justify-content: space-between; 
+}
+
+.List {
+    background-color: white;
+    flex-grow: 1; 
+    overflow-y: auto;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    list-style-type: none; 
+    margin: 0;
+}
+
+.List li {
+    padding: 0.5rem;
+    margin-bottom: 1rem; 
+    border: 1px solid #ccc; 
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+}
+
