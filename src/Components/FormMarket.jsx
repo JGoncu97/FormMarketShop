@@ -4,15 +4,23 @@ import { ListProduct } from './ListProduct/ListProduct';
 import { ProductContext } from './Context/ListProvider';
 
 export const FormMarket = () => {
-    const { listProduct, addProduct, totalPrice } = useContext(ProductContext); 
+    const { listProduct, addProduct, totalPrice ,dateProduct } = useContext(ProductContext); 
     const [nameProduct, setNameProduct] = useState('');
     const [priceProduct, setPriceProduct] = useState(0);
-    const [dateProduct, setDateProduct] = useState('');
+
+    
 
     const handleAddProduct = (e) => {
         e.preventDefault();
-        const newProduct = { name: nameProduct, price: priceProduct, date: dateProduct };
+
+        if(nameProduct || priceProduct == null){
+          
+        }
+        const newProduct = { name: nameProduct, price: priceProduct};
         addProduct(newProduct);
+        
+        setNameProduct('');
+        setPriceProduct(0);
     };
 
     return (
@@ -22,34 +30,32 @@ export const FormMarket = () => {
                     <h2>Agregar Productos</h2>
                     <input
                         className="input"
+                        value={nameProduct}
                         onChange={(e) => setNameProduct(e.target.value)}
                         type="text"
                         placeholder="Nombre del producto"
                     />
                     <input
+                        value={priceProduct}
                         className="input"
                         onChange={(e) => setPriceProduct(Number(e.target.value))}
                         type="text"
                         placeholder="Precio del Producto"
                     />
-                    <input
-                        className="input"
-                        onChange={(e) => setDateProduct(e.target.value)}
-                        type="date"
-                        placeholder="Fecha en la que se agrega el Producto"
-                    />
+                    
                     <button className="buttonSubmit">Agregar a la lista</button>
                 </form>
 
                 <section className="ListProduct">
                     
-                    <h2>Lista de productos</h2>
+                    <h2 className='titleList'>Lista de productos {dateProduct}</h2>
+
 
                         <ListProduct products={listProduct} />
 
-                    <p className="TotalPrice">
+                    <h3 className="TotalPrice">
                         Precio Total ${totalPrice} 
-                    </p>
+                    </h3>
                 </section>
             </div>
         </>

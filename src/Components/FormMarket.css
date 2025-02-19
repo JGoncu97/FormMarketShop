@@ -5,12 +5,13 @@ height: 31rem;
 display: flex;
 justify-content: space-around;
 padding: 5rem;
-border: 0.4rem solid black;
+
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+box-shadow: 0px 2px 10px rgb(0, 0, 0);
 }
 
 .FormList{
-    background-color: rgb(189, 99, 99);
+    background-color: rgb(33, 30, 211);
     width: 20rem;
     height: 23rem;
     display: flex;
@@ -18,6 +19,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 2.5rem;
     text-align: center;
     border-radius: 1rem;
+    box-shadow: 0px 2px 10px white;
+    
 }
 
 
@@ -33,10 +36,17 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 1rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
+    border-style: groove ;
+    box-shadow: 0px 3px 10px rgb(12, 12, 12);
     
 }
 
 .TotalPrice{
-    margin-left: 7rem;
-    
+    font-size: 1.2rem;
+    margin-left: 5.5rem;
+    text-decoration-style: dashed;
+}
+
+.titleList{
+    text-align: center;
 }
